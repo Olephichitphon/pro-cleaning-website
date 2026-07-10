@@ -163,7 +163,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "House Cleaning": "ทำความสะอาดบ้าน",
             "Deep Cleaning": "ทำความสะอาดล้ำลึก",
             "For spaces that need extra attention, our deep cleaning service tackles hard-to-reach areas and stubborn dirt.": "สำหรับพื้นที่ที่ต้องการการดูแลเป็นพิเศษ บริการทำความสะอาดล้ำลึกของเราจะช่วยจัดการกับจุดที่เข้าถึงยากและคราบฝังแน่น",
-            "While we can customize your cleaning plan to suit your needs, most clients schedule regular cleaning services:": "แม้ว่าเราจะสามารถปรับแต่งบริการให้เหมาะกับความต้องการของคุณได้ แต่ลูกค้าส่วนใหญ่มักเลือกใช้บริการทำความสะอาดเป็นประจำดังนี้:"
+            "While we can customize your cleaning plan to suit your needs, most clients schedule regular cleaning services:": "แม้ว่าเราจะสามารถปรับแต่งบริการให้เหมาะกับความต้องการของคุณได้ แต่ลูกค้าส่วนใหญ่มักเลือกใช้บริการทำความสะอาดเป็นประจำดังนี้:",
+            "Expert Team": "ทีมงานมืออาชีพ",
+            "We have professional expert cleaning staff ensuring top-notch cleanliness and hygiene for your space.": "เรามีทีมงานทำความสะอาดมืออาชีพที่พร้อมดูแลความสะอาดและสุขอนามัยในพื้นที่ของคุณอย่างสมบูรณ์แบบ",
+            "Somsri Raksa": "สมศรี รักษา",
+            "Sombat Jaidee": "สมบัติ ใจดี",
+            "Malee Saejong": "มาลี แซ่จง",
+            "He is an expert cleaning staff member who provides thorough cleaning with precision,": "เป็นพนักงานทำความสะอาดผู้เชี่ยวชาญที่ให้บริการอย่างละเอียดและแม่นยำ"
         },
         en: {
             "hero-subtitle": "Quality cleaning<br class=\"mobile-br\">at a fair price.",
