@@ -215,7 +215,19 @@ document.addEventListener('DOMContentLoaded', () => {
             "Address": "ที่อยู่",
             "Name": "ชื่อ",
             "Email": "อีเมล",
-            "Message": "ข้อความ"
+            "Message": "ข้อความ",
+            "Reviews": "รีวิวลูกค้า",
+            "Testimonials": "เสียงตอบรับ",
+            "What Our Clients Say": "ลูกค้าของเราว่าอย่างไรบ้าง?",
+            "\"Outstanding service! The team was highly professional, punctual, and left my office spotless. Highly recommend them for regular cleaning.\"": "\"บริการยอดเยี่ยมมาก! ทีมงานเป็นมืออาชีพ ตรงต่อเวลา และทำความสะอาดออฟฟิศได้เนี้ยบสุดๆ แนะนำให้ใช้บริการประจำเลยครับ\"",
+            "Business Owner": "เจ้าของธุรกิจ",
+            "\"I am amazed by their attention to detail. They cleaned areas I didn't even know were dirty. Worth every penny for the deep cleaning.\"": "\"ประทับใจในความใส่ใจรายละเอียดมาก ทำความสะอาดจุดที่ฉันไม่เคยรู้เลยว่าสกปรก คุ้มค่าทุกบาททุกสตางค์จริงๆ\"",
+            "Homeowner": "เจ้าของบ้าน",
+            "\"Very reliable and trustworthy team. It's so nice to come home to a perfectly clean house after a long week of work.\"": "\"เป็นทีมงานที่ไว้ใจและพึ่งพาได้เสมอ รู้สึกดีมากที่ได้กลับมาเจอห้องสะอาดเอี่ยมหลังจากทำงานหนักมาทั้งสัปดาห์\"",
+            "Apartment Resident": "ผู้พักอาศัยคอนโด",
+            "Somchai S.": "สมชาย ส.",
+            "Araya T.": "อารยา ท.",
+            "Nadech K.": "ณเดชน์ ค."
         },
         en: {
             "hero-subtitle": "Quality cleaning<br class=\"mobile-br\">at a fair price.",
