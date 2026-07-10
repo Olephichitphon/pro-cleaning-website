@@ -169,7 +169,16 @@ document.addEventListener('DOMContentLoaded', () => {
             "Somsri Raksa": "สมศรี รักษา",
             "Sombat Jaidee": "สมบัติ ใจดี",
             "Malee Saejong": "มาลี แซ่จง",
-            "He is an expert cleaning staff member who provides thorough cleaning with precision,": "เป็นพนักงานทำความสะอาดผู้เชี่ยวชาญที่ให้บริการอย่างละเอียดและแม่นยำ"
+            "He is an expert cleaning staff member who provides thorough cleaning with precision,": "เป็นพนักงานทำความสะอาดผู้เชี่ยวชาญที่ให้บริการอย่างละเอียดและแม่นยำ",
+            "Welcome To Our Pro-cleaning Company!": "ยินดีต้อนรับสู่บริษัททำความสะอาดระดับมืออาชีพของเรา!",
+            "We make your space shine! Professional and reliable cleaning service company providing top-notch solutions for homes and businesses. Satisfaction guaranteed!": "เราทำให้พื้นที่ของคุณสะอาดหมดจด! บริษัทรับทำความสะอาดมืออาชีพที่เชื่อถือได้ พร้อมให้บริการที่ดีที่สุดสำหรับบ้านและธุรกิจของคุณ รับประกันความพึงพอใจ 100%!",
+            "Vetted professionals": "ทีมงานผ่านการตรวจสอบประวัติ",
+            "Affordable Prices": "ราคาย่อมเยา เข้าถึงได้",
+            "Next day availability": "พร้อมให้บริการในวันถัดไป",
+            "Best Quality": "คุณภาพดีเยี่ยม",
+            "Standard cleaning tasks": "บริการทำความสะอาดมาตรฐาน",
+            "100% Satisfaction": "รับประกันความพึงพอใจ 100%",
+            "Know More": "ดูรายละเอียดเพิ่มเติม"
         },
         en: {
             "hero-subtitle": "Quality cleaning<br class=\"mobile-br\">at a fair price.",
