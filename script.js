@@ -88,21 +88,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 option.classList.add('active');
 
                 // Check functionality
-                const isYearly = option.textContent.trim() === 'Yearly';
+                const isYearly = option.getAttribute('data-period') === 'yearly';
 
                 priceAmounts.forEach(amount => {
                     const monthlyPrice = parseFloat(amount.getAttribute('data-monthly'));
 
                     if (isYearly) {
-                        const yearlyPrice = (monthlyPrice * 12).toFixed(2);
-                        amount.textContent = yearlyPrice;
+                        const yearlyPrice = (monthlyPrice * 12);
+                        amount.textContent = yearlyPrice.toLocaleString('en-US');
                     } else {
-                        amount.textContent = monthlyPrice.toFixed(2);
+                        amount.textContent = monthlyPrice.toLocaleString('en-US');
                     }
                 });
 
+                const isThai = document.getElementById('langToggleCheckbox') && document.getElementById('langToggleCheckbox').checked;
                 pricePeriods.forEach(period => {
-                    period.textContent = isYearly ? '/Yearly' : '/Monthly';
+                    const newPeriod = isYearly ? '/Yearly' : '/Monthly';
+                    period.dataset.en = newPeriod;
+                    if (isThai && typeof translations !== 'undefined' && translations['th']) {
+                        period.textContent = translations['th'][newPeriod] || newPeriod;
+                    } else {
+                        period.textContent = newPeriod;
+                    }
                 });
             });
         });
@@ -178,7 +185,31 @@ document.addEventListener('DOMContentLoaded', () => {
             "Best Quality": "คุณภาพดีเยี่ยม",
             "Standard cleaning tasks": "บริการทำความสะอาดมาตรฐาน",
             "100% Satisfaction": "รับประกันความพึงพอใจ 100%",
-            "Know More": "ดูรายละเอียดเพิ่มเติม"
+            "Know More": "ดูรายละเอียดเพิ่มเติม",
+            "Choose From Our Lowest Plans and Prices": "เลือกแพ็กเกจและราคาที่คุ้มค่าที่สุดของเรา",
+            "Basic Package": "แพ็กเกจเริ่มต้น",
+            "Enterprise Package": "แพ็กเกจองค์กร",
+            "Premium Package": "แพ็กเกจพรีเมียม",
+            "/Monthly": "/เดือน",
+            "/Yearly": "/ปี",
+            "Dusting of all surfaces": "ปัดฝุ่นทุกพื้นผิว",
+            "Sweeping and mopping floors": "กวาดและถูพื้น",
+            "Vacuuming carpets and rugs": "ดูดฝุ่นพรมและพรมเช็ดเท้า",
+            "Cleaning of kitchen surfaces": "ทำความสะอาดพื้นผิวห้องครัว",
+            "Cleaning of bathroom surfaces": "ทำความสะอาดพื้นผิวห้องน้ำ",
+            "Emptying trash bins": "ทิ้งขยะ",
+            "All services in the Basic Plan": "รวมบริการทั้งหมดในแพ็กเกจเริ่มต้น",
+            "Detailed dusting": "ปัดฝุ่นอย่างละเอียด",
+            "Wiping down of kitchen appt": "เช็ดทำความสะอาดเครื่องใช้ในครัว",
+            "Cleaning inside the microwave": "ทำความสะอาดภายในไมโครเวฟ",
+            "Changing bed linens": "เปลี่ยนผ้าปูที่นอน",
+            "Spot cleaning walls and doors": "เช็ดคราบเฉพาะจุดบนผนังและประตู",
+            "All services in the Clean Plan": "รวมบริการทั้งหมดในแพ็กเกจองค์กร",
+            "Deep cleaning of kitchen appt": "ทำความสะอาดเครื่องใช้ในครัวเชิงลึก",
+            "baseboards, door frames, & vents": "ทำความสะอาดขอบบัวผนัง วงกบประตู และช่องระบายอากาศ",
+            "Organization of closets pantries": "จัดระเบียบตู้เสื้อผ้าและตู้เก็บของ",
+            "Carpet, upholstery spot cleaning": "ขจัดคราบเฉพาะจุดบนพรมและเบาะ",
+            "Detailed bathroom cleaning": "ทำความสะอาดห้องน้ำอย่างละเอียด"
         },
         en: {
             "hero-subtitle": "Quality cleaning<br class=\"mobile-br\">at a fair price.",
