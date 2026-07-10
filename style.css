@@ -212,7 +212,7 @@ ul {
 
 /* Hero Section */
 .hero {
-    background-image: url('images/Hero\ Iamge.png');
+    background-image: url('images/hero-image.jpg');
     /* Recovered from previous state */
     background-size: cover;
     background-position: center;
