@@ -143,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "Get Start Now": "เริ่มต้นใช้งาน",
             "Quality cleaning at a fair price.": "ทำความสะอาดคุณภาพเยี่ยมในราคายุติธรรม",
             "Specialized, efficient, and thorough cleaning services": "บริการทำความสะอาดที่เชี่ยวชาญ มีประสิทธิภาพ และหมดจด",
+            "We provide Performing cleaning tasks using the least amount of time, energy, and money.": "เราให้บริการทำความสะอาดโดยใช้เวลา แรงงาน และงบประมาณให้น้อยที่สุดเพื่อประโยชน์สูงสุดของคุณ",
             "View all Services": "ดูบริการทั้งหมด",
             "We Always Provide The Best Service": "เรามอบบริการที่ดีที่สุดเสมอ",
             "Book Now": "จองเลย",
