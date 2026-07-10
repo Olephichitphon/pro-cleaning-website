@@ -450,6 +450,17 @@ ul {
     border-color: var(--primary-color);
 }
 
+.btn-card.btn-line {
+    background-color: #06C755;
+    border-color: #06C755;
+    color: #fff;
+}
+.btn-card.btn-line:hover {
+    background-color: #05a044;
+    border-color: #05a044;
+    color: #fff;
+}
+
 .scroll-btn {
     position: absolute;
     top: 35%;
