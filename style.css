@@ -919,7 +919,9 @@ ul {
     }
 
     .about-buttons {
-        justify-content: center;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
     }
 
     .about-title-large {
