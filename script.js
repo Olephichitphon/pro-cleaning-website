@@ -141,7 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
             "Pricing": "ราคา",
             "Contact": "ติดต่อ",
             "Get Start Now": "เริ่มต้นใช้งาน",
-            "Quality cleaning at a fair price.": "ทำความสะอาดคุณภาพเยี่ยมในราคายุติธรรม",
+            "hero-subtitle": "ทำความสะอาดคุณภาพเยี่ยม<br class=\"mobile-br\">ในราคายุติธรรม",
+            "hero-title": "บริการทำความสะอาด<br class=\"mobile-br\">ที่เชี่ยวชาญ<br class=\"mobile-br\">มีประสิทธิภาพ<br class=\"mobile-br\">และหมดจด",
+            "hero-description": "เราให้บริการทำความสะอาดโดยใช้เวลา แรงงาน<br class=\"mobile-br\">และงบประมาณให้น้อยที่สุด<br class=\"mobile-br\">เพื่อประโยชน์สูงสุดของคุณ",
             "Specialized, efficient, and thorough cleaning services": "บริการทำความสะอาดที่เชี่ยวชาญ มีประสิทธิภาพ และหมดจด",
             "We provide Performing cleaning tasks using the least amount of time, energy, and money.": "เราให้บริการทำความสะอาดโดยใช้เวลา แรงงาน และงบประมาณให้น้อยที่สุดเพื่อประโยชน์สูงสุดของคุณ",
             "View all Services": "ดูบริการทั้งหมด",
@@ -156,6 +158,11 @@ document.addEventListener('DOMContentLoaded', () => {
             "Yearly": "รายปี",
             "Get In Touch": "ติดต่อเรา",
             "Send Message": "ส่งข้อความ"
+        },
+        en: {
+            "hero-subtitle": "Quality cleaning<br class=\"mobile-br\">at a fair price.",
+            "hero-title": "Specialized,<br class=\"mobile-br\">efficient,<br class=\"mobile-br\">and thorough<br class=\"mobile-br\">cleaning services",
+            "hero-description": "We provide Performing cleaning tasks<br class=\"mobile-br\">using the least amount of time, energy,<br class=\"mobile-br\">and money."
         }
     };
 
@@ -182,9 +189,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if(lang === 'th' && translations['th'][key]) {
-                el.innerText = translations['th'][key];
+                el.innerHTML = translations['th'][key];
             } else if (lang === 'en') {
-                el.innerText = key;
+                if (translations['en'] && translations['en'][key]) {
+                    el.innerHTML = translations['en'][key];
+                } else {
+                    el.innerHTML = key;
+                }
             }
         });
     }
