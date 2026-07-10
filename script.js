@@ -127,4 +127,72 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     animatedElements.forEach(el => observer.observe(el));
+
+    // Language Toggle Logic
+    const langToggle = document.getElementById('langToggle');
+    let currentLang = 'en';
+
+    const translations = {
+        th: {
+            "Home": "หน้าแรก",
+            "About": "เกี่ยวกับเรา",
+            "Services": "บริการ",
+            "Team": "ทีมงาน",
+            "Pricing": "ราคา",
+            "Contact": "ติดต่อ",
+            "Get Start Now": "เริ่มต้นใช้งาน",
+            "Quality cleaning at a fair price.": "ทำความสะอาดคุณภาพเยี่ยมในราคายุติธรรม",
+            "Specialized, efficient, and thorough cleaning services": "บริการทำความสะอาดที่เชี่ยวชาญ มีประสิทธิภาพ และหมดจด",
+            "View all Services": "ดูบริการทั้งหมด",
+            "We Always Provide The Best Service": "เรามอบบริการที่ดีที่สุดเสมอ",
+            "Book Now": "จองเลย",
+            "Effective Cleaning Requires": "การทำความสะอาดที่มีประสิทธิภาพต้องใช้",
+            "an Expert Cleaning Team": "ทีมงานทำความสะอาดที่เชี่ยวชาญ",
+            "Our Pricing": "ราคาของเรา",
+            "Choose From Our Lowest": "เลือกจากราคาต่ำสุดของเรา",
+            "Plans and Prices": "แพ็กเกจและราคา",
+            "Monthly": "รายเดือน",
+            "Yearly": "รายปี",
+            "Get In Touch": "ติดต่อเรา",
+            "Send Message": "ส่งข้อความ"
+        }
+    };
+
+    function translatePage(lang) {
+        // Simple DOM traversal for text nodes
+        const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+        let node;
+        while(node = walk.nextNode()) {
+            const text = node.nodeValue.trim();
+            if(text !== "") {
+                if(!node.parentElement.dataset.en) {
+                    node.parentElement.dataset.en = text;
+                }
+                const originalText = node.parentElement.dataset.en;
+                if(lang === 'th' && translations['th'][originalText]) {
+                    node.nodeValue = translations['th'][originalText];
+                } else if(lang === 'en') {
+                    node.nodeValue = originalText;
+                }
+            }
+        }
+        
+        // Handle explicit data-i18n attributes
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if(lang === 'th' && translations['th'][key]) {
+                el.innerText = translations['th'][key];
+            } else if (lang === 'en') {
+                el.innerText = key;
+            }
+        });
+    }
+
+    const langToggleCheckbox = document.getElementById('langToggleCheckbox');
+    if (langToggleCheckbox) {
+        langToggleCheckbox.addEventListener('change', (e) => {
+            currentLang = e.target.checked ? 'th' : 'en';
+            translatePage(currentLang);
+        });
+    }
 });

@@ -99,6 +99,11 @@ ul {
     gap: 2rem;
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
 .nav-list {
     display: flex;
     gap: 2rem;
@@ -1357,4 +1362,84 @@ ul {
 .animate-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Language Switch */
+.lang-switch {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 76px;
+    height: 38px;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    margin-right: 1.5rem;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.lang-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.switch-thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1;
+}
+
+.lang-switch input:checked ~ .switch-thumb {
+    transform: translateX(38px);
+}
+
+.flag {
+    position: absolute;
+    top: 7px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flag-en {
+    left: 7px;
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+.flag-th {
+    right: 7px;
+    opacity: 0.4;
+    filter: grayscale(80%);
+}
+
+.lang-switch input:checked ~ .flag-en {
+    opacity: 0.4;
+    filter: grayscale(80%);
+}
+
+.lang-switch input:checked ~ .flag-th {
+    opacity: 1;
+    filter: grayscale(0%);
 }
