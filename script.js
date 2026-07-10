@@ -209,7 +209,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "baseboards, door frames, & vents": "ทำความสะอาดขอบบัวผนัง วงกบประตู และช่องระบายอากาศ",
             "Organization of closets pantries": "จัดระเบียบตู้เสื้อผ้าและตู้เก็บของ",
             "Carpet, upholstery spot cleaning": "ขจัดคราบเฉพาะจุดบนพรมและเบาะ",
-            "Detailed bathroom cleaning": "ทำความสะอาดห้องน้ำอย่างละเอียด"
+            "Detailed bathroom cleaning": "ทำความสะอาดห้องน้ำอย่างละเอียด",
+            "Call Us": "โทรหาเรา",
+            "Email Now": "ส่งอีเมล",
+            "Address": "ที่อยู่",
+            "Name": "ชื่อ",
+            "Email": "อีเมล",
+            "Message": "ข้อความ"
         },
         en: {
             "hero-subtitle": "Quality cleaning<br class=\"mobile-br\">at a fair price.",
@@ -248,6 +254,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     el.innerHTML = key;
                 }
+            }
+        });
+        
+        // Handle placeholders
+        document.querySelectorAll('[data-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-placeholder');
+            if (lang === 'th' && translations['th'][key]) {
+                el.placeholder = translations['th'][key];
+            } else if (lang === 'en') {
+                el.placeholder = key;
             }
         });
     }
