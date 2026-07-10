@@ -157,7 +157,11 @@ document.addEventListener('DOMContentLoaded', () => {
             "Monthly": "รายเดือน",
             "Yearly": "รายปี",
             "Get In Touch": "ติดต่อเรา",
-            "Send Message": "ส่งข้อความ"
+            "Send Message": "ส่งข้อความ",
+            "Office Cleaning": "ทำความสะอาดสำนักงาน",
+            "Spring Cleaning": "ทำความสะอาดใหญ่ (Big Clean)",
+            "House Cleaning": "ทำความสะอาดบ้าน",
+            "While we can customize your cleaning plan to suit your needs, most clients schedule regular cleaning services:": "แม้ว่าเราจะสามารถปรับแต่งบริการให้เหมาะกับความต้องการของคุณได้ แต่ลูกค้าส่วนใหญ่มักเลือกใช้บริการทำความสะอาดเป็นประจำดังนี้:"
         },
         en: {
             "hero-subtitle": "Quality cleaning<br class=\"mobile-br\">at a fair price.",
