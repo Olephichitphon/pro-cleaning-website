@@ -270,6 +270,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const langToggleCheckbox = document.getElementById('langToggleCheckbox');
     if (langToggleCheckbox) {
+        // Set default language to Thai on load
+        langToggleCheckbox.checked = true;
+        currentLang = 'th';
+        translatePage(currentLang);
+        
         langToggleCheckbox.addEventListener('change', (e) => {
             currentLang = e.target.checked ? 'th' : 'en';
             translatePage(currentLang);
